@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		742235B52C6662CF00E62D56 /* SplineIntegrationTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742235B42C6662CF00E62D56 /* SplineIntegrationTestingApp.swift */; };
-		742235B72C6662CF00E62D56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742235B62C6662CF00E62D56 /* ContentView.swift */; };
+		742235B72C6662CF00E62D56 /* nativeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742235B62C6662CF00E62D56 /* nativeButtonView.swift */; };
 		742235B92C6662CF00E62D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742235B82C6662CF00E62D56 /* Assets.xcassets */; };
 		742235BC2C6662CF00E62D56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742235BB2C6662CF00E62D56 /* Preview Assets.xcassets */; };
+		742235C42C6665D800E62D56 /* SplineRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 742235C32C6665D800E62D56 /* SplineRuntime */; };
+		742235C62C668C3000E62D56 /* htmlButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742235C52C668C3000E62D56 /* htmlButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		742235B12C6662CF00E62D56 /* SplineIntegrationTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplineIntegrationTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		742235B42C6662CF00E62D56 /* SplineIntegrationTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplineIntegrationTestingApp.swift; sourceTree = "<group>"; };
-		742235B62C6662CF00E62D56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		742235B62C6662CF00E62D56 /* nativeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nativeButtonView.swift; sourceTree = "<group>"; };
 		742235B82C6662CF00E62D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		742235BB2C6662CF00E62D56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		742235C52C668C3000E62D56 /* htmlButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htmlButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742235C42C6665D800E62D56 /* SplineRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				742235B42C6662CF00E62D56 /* SplineIntegrationTestingApp.swift */,
-				742235B62C6662CF00E62D56 /* ContentView.swift */,
+				742235B62C6662CF00E62D56 /* nativeButtonView.swift */,
+				742235C52C668C3000E62D56 /* htmlButtonView.swift */,
 				742235B82C6662CF00E62D56 /* Assets.xcassets */,
 				742235BA2C6662CF00E62D56 /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = SplineIntegrationTesting;
+			packageProductDependencies = (
+				742235C32C6665D800E62D56 /* SplineRuntime */,
+			);
 			productName = SplineIntegrationTesting;
 			productReference = 742235B12C6662CF00E62D56 /* SplineIntegrationTesting.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 742235A82C6662CF00E62D56;
+			packageReferences = (
+				742235C22C6665D800E62D56 /* XCRemoteSwiftPackageReference "spline-ios" */,
+			);
 			productRefGroup = 742235B22C6662CF00E62D56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742235B72C6662CF00E62D56 /* ContentView.swift in Sources */,
+				742235B72C6662CF00E62D56 /* nativeButtonView.swift in Sources */,
+				742235C62C668C3000E62D56 /* htmlButtonView.swift in Sources */,
 				742235B52C6662CF00E62D56 /* SplineIntegrationTestingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		742235C22C6665D800E62D56 /* XCRemoteSwiftPackageReference "spline-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splinetool/spline-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		742235C32C6665D800E62D56 /* SplineRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 742235C22C6665D800E62D56 /* XCRemoteSwiftPackageReference "spline-ios" */;
+			productName = SplineRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 742235A92C6662CF00E62D56 /* Project object */;
 }
